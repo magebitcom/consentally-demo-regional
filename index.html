@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The ConsentAlly install tag, exactly as the dashboard gives it: first, before any other script. -->
+    <!-- prettier-ignore -->
+    <script src="https://edge.consentally.com/a9440a9b4c313c80.js" data-ca-key="thzbexdska6x66dg" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js), written as a ConsentAlly manual tag: the browser never fetches it, and
+         ConsentAlly loads it when the store's Consent Mode setting allows (basic: after consent). -->
+    <script
+      type="text/plain"
+      data-ca-src="https://www.googletagmanager.com/gtag/js?id=G-5DCLB8XT3F"
+      async
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-5DCLB8XT3F");
+    </script>
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Harbour Knit: regional banner demo store</title>
+    <link rel="stylesheet" href="/demo.css" />
+    <script src="/demo.js" defer></script>
+  </head>
+  <body data-setup="gtag">
+    <header class="store-header">
+      <a class="store-name" href="/">Harbour Knit</a>
+      <nav aria-label="Store">
+        <a href="https://demo.consentally.com/gtag/">gtag.js store</a>
+        <a href="https://demo.consentally.com/gtm/">Tag Manager store</a>
+        <a href="/" aria-current="page">Regional store</a>
+      </nav>
+    </header>
+
+    <main>
+      <aside class="setup" aria-labelledby="setup-title">
+        <h2 id="setup-title">How this page is set up</h2>
+        <ol>
+          <li>
+            The ConsentAlly install tag, first in <code>&lt;head&gt;</code> (store key
+            <code>thzbexdska6x66dg</code>).
+          </li>
+          <li>
+            Google's gtag.js for the Google Analytics 4 property <code>G-5DCLB8XT3F</code>, directly
+            after it, written as a ConsentAlly manual tag (<code>type="text/plain"</code> and
+            <code>data-ca-src</code>), so the browser fetches nothing from Google before ConsentAlly
+            lets it load.
+          </li>
+        </ol>
+        <p>
+          ConsentAlly sets Google Consent Mode's defaults to denied before gtag.js runs. What
+          happens next depends on where you open the page:
+        </p>
+        <ul>
+          <li>
+            <strong>EU and EEA, United Kingdom, Switzerland:</strong> the banner asks first.
+            Everything optional stays denied until you choose.
+          </li>
+          <li>
+            <strong>United States, every state:</strong> no banner. ConsentAlly updates Consent Mode
+            to granted for analytics and advertising as the page loads and loads gtag.js. The
+            ConsentAlly button in the corner ("Do Not Sell or Share My Personal Information" in
+            California, "Your Privacy Choices" in other states) lets you opt out; Global Privacy
+            Control, when your browser sends it, keeps advertising denied.
+          </li>
+          <li><strong>Anywhere else:</strong> the banner asks first, as in Europe.</li>
+        </ul>
+      </aside>
+
+      <section class="product" aria-labelledby="product-title">
+        <div class="product-photo" aria-hidden="true">
+          <svg viewBox="0 0 200 200" width="200" height="200">
+            <circle cx="100" cy="84" r="16" fill="#c9d3e0" />
+            <path d="M40 140 C40 80 160 80 160 140 Z" fill="#7d93b2" />
+            <rect x="34" y="132" width="132" height="30" rx="6" fill="#5f7799" />
+          </svg>
+        </div>
+        <div class="product-details">
+          <p class="crumbs">Home / Accessories / Hats</p>
+          <h1 id="product-title">Ribbed wool beanie</h1>
+          <p class="price">$38.00</p>
+          <p>Soft merino rib knit with a deep fold-over cuff. Colour: dusty blue.</p>
+          <button type="button" class="buy" data-demo="add-to-cart">Add to shopping bag</button>
+          <p class="added" data-demo="added" role="status"></p>
+        </div>
+      </section>
+
+      <section class="consent-state" aria-labelledby="state-title">
+        <h2 id="state-title">Google Consent Mode on this page</h2>
+        <p>
+          Read from the page's <code>dataLayer</code>: the default ConsentAlly set, then each
+          update.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Purpose</th>
+              <th scope="col">State</th>
+            </tr>
+          </thead>
+          <tbody data-demo="state">
+            <tr>
+              <td>ad_storage</td>
+              <td>Waiting for the default</td>
+            </tr>
+            <tr>
+              <td>ad_user_data</td>
+              <td>Waiting for the default</td>
+            </tr>
+            <tr>
+              <td>ad_personalization</td>
+              <td>Waiting for the default</td>
+            </tr>
+            <tr>
+              <td>analytics_storage</td>
+              <td>Waiting for the default</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="history" data-demo="history"></p>
+      </section>
+    </main>
+
+    <footer class="store-footer">
+      <a href="#consentally-preferences">Cookie settings</a>
+      <p>
+        A demo store for ConsentAlly's regional banner and Google Consent Mode. Nothing here is for
+        sale.
+      </p>
+    </footer>
+  </body>
+</html>
